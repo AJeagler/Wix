@@ -10,7 +10,8 @@ app.get("/token", async (req, res) => {
     const response = await fetch(`https://api-in.cometchat.io/v3/users/${uid}/auth_tokens`, {
       method: "POST",
       headers: {
-        "apikey": process.env.COMETCHAT_API_KEY,
+        "apikey": "0c331b6f7371d139b168e48c99b822526a71d4e2",
+        "appId": "1675375c154db3be3",   // <-- ADD THIS
         "Content-Type": "application/json"
       }
     });
@@ -25,3 +26,4 @@ app.get("/token", async (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log("Server running on port", port));
+
